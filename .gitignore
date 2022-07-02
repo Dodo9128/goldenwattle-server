@@ -107,3 +107,6 @@ dist
 
 # Package-lock.json
 package-lock.json
+
+# .vs debugger setting
+.vscode
