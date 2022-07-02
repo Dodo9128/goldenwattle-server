@@ -1,6 +1,6 @@
 "use strict";
 
-export const send_ok: Function = (msg: string = "", data: object = {}) => {
+export const send_ok = (msg = "", data: any = {}) => {
   return {
     result: "ok",
     message: msg,
@@ -8,7 +8,7 @@ export const send_ok: Function = (msg: string = "", data: object = {}) => {
   };
 };
 
-export const send_fail: Function = (msg: string = "", data: object = {}) => {
+export const send_fail = (msg = "", data: any = {}) => {
   return {
     result: "fail",
     message: msg,
@@ -16,7 +16,7 @@ export const send_fail: Function = (msg: string = "", data: object = {}) => {
   };
 };
 
-export const check_function_params: Function = (param_array: any[]) => {
+export const check_function_params = (param_array: any[]) => {
   if (!Array.isArray(param_array)) {
     return send_fail("array type param required", null);
   }
