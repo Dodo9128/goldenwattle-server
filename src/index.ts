@@ -1,7 +1,6 @@
 import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
-import { send_ok, send_fail } from "./libs/utils/functionReturn";
-import path from "path";
+import { send_ok } from "./libs/utils/functionReturn";
 
 const node_env: string | undefined = process.env.NODE_ENV || "development";
 let envPath = "";
