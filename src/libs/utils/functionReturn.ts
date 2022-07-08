@@ -1,6 +1,14 @@
 "use strict";
 
-export const send_ok = (msg = "", data: any = {}) => {
+interface SendOK {
+  (msg: string, data: object | null): object;
+}
+
+interface SendFail {
+  (msg: string, data: object | null): object;
+}
+
+export const send_ok: SendOK = (msg = "", data = {}) => {
   return {
     result: "ok",
     message: msg,
@@ -8,7 +16,7 @@ export const send_ok = (msg = "", data: any = {}) => {
   };
 };
 
-export const send_fail = (msg = "", data: any = {}) => {
+export const send_fail: SendFail = (msg = "", data = {}) => {
   return {
     result: "fail",
     message: msg,
